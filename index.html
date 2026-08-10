@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>GABRIEL.EXE</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PORTADA
+===================================================== -->
+
+<section id="inicio">
+
+
+    <div class="portada-fondo">
+
+        <div class="estrellas"></div>
+
+        <div class="luna"></div>
+
+        <div class="montana montana-1"></div>
+
+        <div class="montana montana-2"></div>
+
+
+        <div class="casa">
+
+            <div class="techo"></div>
+
+            <div class="pared">
+
+                <div class="ventana ventana-1"></div>
+
+                <div class="ventana ventana-2"></div>
+
+                <div class="puerta"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="portada-contenido">
+
+        <div class="archivo-superior">
+            ARCHIVO PERSONAL · 005
+        </div>
+
+        <div class="linea-dorada"></div>
+
+        <div class="gabriel">
+            GABRIEL
+        </div>
+
+        <div class="exe">
+            .EXE
+        </div>
+
+        <div class="identidad">
+            UNA HISTORIA QUE DECIDÍ GUARDAR
+        </div>
+
+        <div class="fecha">
+            2026 · ARCHIVO PRIVADO
+        </div>
+
+        <p class="portada-texto">
+            Algunas historias no necesitan ser perfectas
+            para convertirse en recuerdos que uno decide
+            conservar para siempre.
+        </p>
+
+        <button
+            class="boton-entrada"
+            onclick="abrirArchivo()"
+        >
+            ABRIR ARCHIVO
+        </button>
+
+        <div class="codigo-inferior">
+            SISTEMA · GABRIEL.EXE · CONEXIÓN ESTABLE
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARCHIVO PRINCIPAL
+===================================================== -->
+
+<section
+    id="archivo"
+    class="oculto"
+>
+
+
+    <header class="cabecera">
+
+        <div class="codigo">
+            ARCHIVO PRINCIPAL · 005
+        </div>
+
+        <h1>
+            Nuestra historia
+        </h1>
+
+        <p>
+            Cinco archivos. Miles de pequeños momentos.
+        </p>
+
+    </header>
+
+
+
+    <main class="escritorio">
+
+
+        <div class="titulo-escritorio">
+
+            <span>
+                SISTEMA DE MEMORIAS
+            </span>
+
+            <h2>
+                Selecciona un recuerdo
+            </h2>
+
+            <p>
+                Algunos archivos no se guardan en una computadora.
+                Se quedan en la memoria.
+            </p>
+
+        </div>
+
+
+
+        <div class="objetos">
+
+
+            <!-- =================================================
+                 ARCHIVO 001
+            ================================================== -->
+
+            <button
+                class="objeto documento"
+                onclick="mostrarPantalla('historia')"
+            >
+
+                <small>
+                    ARCHIVO 001
+                </small>
+
+                <h3>
+                    Nuestra historia
+                </h3>
+
+                <div class="mini-linea"></div>
+
+                <p>
+                    Cómo empezó todo, incluso cuando
+                    ninguno de los dos sabía en qué
+                    terminaría convirtiéndose.
+                </p>
+
+                <span>
+                    ABRIR ARCHIVO →
+                </span>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 ARCHIVO 002
+            ================================================== -->
+
+            <button
+                class="objeto recuerdos-objeto"
+                onclick="mostrarPantalla('recuerdos')"
+            >
+
+                <div class="tarjeta-recuerdo">
+
+                    <small>
+                        ARCHIVO 002
+                    </small>
+
+                    <h3>
+                        Recuerdos
+                    </h3>
+
+                    <div class="mini-linea"></div>
+
+                    <p>
+                        Días pequeños que terminaron
+                        significando mucho más de lo esperado.
+                    </p>
+
+                </div>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 ARCHIVO 003
+            ================================================== -->
+
+            <button
+                class="objeto galeria-objeto"
+                onclick="mostrarPantalla('galeria')"
+            >
+
+                <div class="fotos-apiladas">
+
+                    <div class="foto-apilada foto-atras"></div>
+
+                    <div class="foto-apilada foto-medio"></div>
+
+                    <div class="foto-apilada foto-frente">
+
+                        <img
+                            src="img/foto1.jpg"
+                            alt="Recuerdo"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="etiqueta-objeto">
+                    ARCHIVO 003 · GALERÍA
+                </div>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 ARCHIVO 004
+            ================================================== -->
+
+            <button
+                class="objeto cancion-objeto"
+                onclick="mostrarPantalla('cancion')"
+            >
+
+                <div class="vinilo-pequeno">
+
+                    <div class="centro-vinilo">
+                        ♪
+                    </div>
+
+                </div>
+
+                <div class="etiqueta-objeto">
+                    ARCHIVO 004 · NUESTRA CANCIÓN
+                </div>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 ARCHIVO 005
+            ================================================== -->
+
+            <button
+                class="objeto secreto-objeto"
+                onclick="mostrarPantalla('secreto')"
+            >
+
+                <div class="sobre-principal">
+
+                    <div class="solapa-sobre"></div>
+
+                    <div class="sello">
+                        ♥
+                    </div>
+
+                    <strong>
+                        ARCHIVO 005
+                    </strong>
+
+                    <small>
+                        ACCESO RESTRINGIDO
+                    </small>
+
+                </div>
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="pie-escritorio">
+
+            <span>
+                GABRIEL.EXE
+            </span>
+
+            <span>
+                ARCHIVO PRIVADO
+            </span>
+
+            <span>
+                005
+            </span>
+
+        </div>
+
+
+    </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARCHIVO 001 — NUESTRA HISTORIA
+===================================================== -->
+
+<section
+    id="historia"
+    class="pantalla pelicula oculto"
+>
+
+
+    <div class="rollo-lateral rollo-izquierdo"></div>
+
+    <div class="rollo-lateral rollo-derecho"></div>
+
+
+    <button
+        class="volver"
+        onclick="volverArchivo()"
+    >
+        ← VOLVER AL ARCHIVO
+    </button>
+
+
+
+    <div class="intro-pelicula">
+
+        <span>
+            ARCHIVO 001 · ROLLO ORIGINAL
+        </span>
+
+        <h2>
+            Nuestra historia
+        </h2>
+
+        <p>
+            No comenzó con una gran declaración,
+            ni con una escena perfectamente escrita.
+            Comenzó de una manera mucho más sencilla:
+            dos personas que todavía no sabían
+            lo importante que terminarían siendo
+            la una para la otra.
+        </p>
+
+        <div class="flecha-scroll">
+            ↓
+        </div>
+
+    </div>
+
+
+
+    <article class="escena">
+
+        <div class="numero-escena">
+            01
+        </div>
+
+        <div class="texto-escena">
+
+            <span>
+                PRIMER ENCUENTRO
+            </span>
+
+            <h2>
+                Todo comenzó jugando
+            </h2>
+
+            <p>
+                Estábamos jugando basket en el internado.
+                Su amigo hizo el famoso “conecte” y,
+                entre bromas y circunstancias que ninguno
+                de los dos planeó realmente, una niña nos
+                terminó obligando a besarnos.
+            </p>
+
+            <p>
+                Y así, de una manera completamente
+                inesperada, comenzó algo que ninguno
+                de los dos imaginaba.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article class="escena escena-centro">
+
+        <div class="texto-escena">
+
+            <span>
+                PRIMER PASO
+            </span>
+
+            <h2>
+                Alguien tenía que enamorarse primero
+            </h2>
+
+            <p>
+                Gaby se enamoró primero.
+                Pero él fue quien dio el primer paso.
+            </p>
+
+            <p>
+                Después de aquel primer beso,
+                pasó aproximadamente una semana
+                hasta que, por chat y de una manera
+                bastante random, llegó la confesión.
+            </p>
+
+            <p>
+                No fue una escena perfecta.
+                Fue simplemente nuestra manera
+                de empezar a descubrirnos.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article class="escena">
+
+        <div class="numero-escena">
+            03
+        </div>
+
+        <div class="texto-escena">
+
+            <span>
+                PRIMERAS IMPRESIONES
+            </span>
+
+            <h2>
+                No me caías precisamente bien
+            </h2>
+
+            <p>
+                Al principio me parecías muuuy arrogante.
+                En algunas ocasiones hasta me caías mal.
+            </p>
+
+            <p>
+                Pero había algo que sí tenía que admitir:
+                me gustaba cómo jugabas.
+            </p>
+
+            <p>
+                Qué curioso que alguien que al principio
+                podía sacarme de quicio terminara
+                convirtiéndose en alguien que quiero
+                tener cerca.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article class="escena escena-centro">
+
+        <div class="texto-escena">
+
+            <span>
+                LO QUE DESCUBRÍ
+            </span>
+
+            <h2>
+                Entonces empecé a conocerte
+            </h2>
+
+            <p>
+                Descubrí tu inteligencia.
+                Esa manera tuya de hacerme reír incluso
+                cuando no tengo ganas.
+            </p>
+
+            <p>
+                Descubrí también lo intenso y emocional
+                que puedes llegar a ser conmigo.
+            </p>
+
+            <p>
+                Y poco a poco dejaste de ser solamente
+                aquel chico que jugaba basket.
+                Te convertiste en alguien cuya presencia
+                empezó a significar muchísimo más.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <article class="escena">
+
+        <div class="numero-escena">
+            05
+        </div>
+
+        <div class="texto-escena">
+
+            <span>
+                AHORA
+            </span>
+
+            <h2>
+                Y aquí seguimos
+            </h2>
+
+            <p>
+                Han existido momentos hermosos,
+                discusiones, tropiezos y días complicados.
+            </p>
+
+            <p>
+                Pero también están los abrazos,
+                los besitos, las risas y todas esas veces
+                en las que buscas arreglar las cosas.
+            </p>
+
+            <p>
+                Supongo que nuestra historia no se trata
+                de haber tenido un camino perfecto.
+                Se trata de haber decidido continuar
+                caminándolo juntos.
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <div class="final-pelicula">
+
+        <span>
+            FIN DEL ROLLO
+        </span>
+
+        <h2>
+            Continuará...
+        </h2>
+
+        <div class="infinito">
+            ∞
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARCHIVO 002 — RECUERDOS
+===================================================== -->
+
+<section
+    id="recuerdos"
+    class="pantalla oculto"
+>
+
+
+    <button
+        class="volver"
+        onclick="volverArchivo()"
+    >
+        ← VOLVER AL ARCHIVO
+    </button>
+
+
+    <div class="contenido-interior">
+
+        <span>
+            ARCHIVO 002 · MEMORIAS
+        </span>
+
+        <h2>
+            Los pequeños momentos
+        </h2>
+
+        <p class="frase">
+            Porque algunas cosas parecen pequeñas
+            cuando suceden, pero con el tiempo
+            terminan siendo las que más recordamos.
+        </p>
+
+
+        <div class="tarjetas-recuerdos">
+
+
+            <article>
+
+                <h3>
+                    🌧️ Bajo la lluvia
+                </h3>
+
+                <p>
+                    Veníamos de su casa cuando comenzó
+                    a llover muy fuerte. Caminamos rápido
+                    hasta un lugar donde vendían tortitas
+                    de maíz y pozole.
+                </p>
+
+                <p>
+                    Él compró, comimos y nos quedamos
+                    un rato juntos. Después dijo:
+                    “Vámonos corriendo”.
+                </p>
+
+                <p>
+                    Yo dije que sí y salimos corriendo
+                    bajo la lluvia.
+                </p>
+
+                <p>
+                    No hubo beso de película.
+                    No nos tomamos de la mano.
+                    Solo éramos nosotros corriendo
+                    bajo la lluvia.
+                </p>
+
+            </article>
+
+
+
+            <article>
+
+                <h3>
+                    👑 El día del reinado
+                </h3>
+
+                <p>
+                    Ese día tuve momentos de ansiedad
+                    y él estuvo conmigo.
+                </p>
+
+                <p>
+                    Me recordó que podía hacerlo,
+                    que era inteligente, que lo iba
+                    a lograr y que no tenía que preocuparme.
+                </p>
+
+                <p>
+                    También me dijo que era hermosa.
+                    Después me vio participar y,
+                    cuando llevaba mi vestido,
+                    me dijo que me veía hermosa.
+                </p>
+
+                <p>
+                    No gané el reinado, pero aquel día
+                    aprendí que una corona no es la única
+                    manera de sentirse especial.
+                </p>
+
+            </article>
+
+
+
+            <article>
+
+                <h3>
+                    🏠 El día que viniste
+                </h3>
+
+                <p>
+                    Estaba enferma y me estaba muriendo
+                    del dolor, pero también estaba nerviosa.
+                </p>
+
+                <p>
+                    Nunca había presentado un novio
+                    a mi familia.
+                </p>
+
+                <p>
+                    Me levanté de la cama solamente
+                    para poder verte.
+                </p>
+
+                <p>
+                    Te esperé en la sala.
+                    Cuando llegaste, fuiste hasta donde
+                    estaba y me saludaste.
+                </p>
+
+                <p>
+                    Tú también estabas nervioso.
+                    Y aun así terminó siendo un día lindo.
+                </p>
+
+            </article>
+
+
+
+            <article>
+
+                <h3>
+                    🎂 Un cumpleaños diferente
+                </h3>
+
+                <p>
+                    Ese día teníamos que ir a clases.
+                </p>
+
+                <p>
+                    Pero decidimos no ir y no decirle
+                    a nadie.
+                </p>
+
+                <p>
+                    Mi hermana nos dio dinero y terminamos
+                    comiendo arroz chino juntos.
+                </p>
+
+                <p>
+                    No pasó nada extraordinario.
+                    Y quizás justamente por eso lo recuerdo
+                    con cariño.
+                </p>
+
+                <p>
+                    Estuvimos juntos todo el día
+                    y no peleamos.
+                </p>
+
+            </article>
+
+
+
+            <article>
+
+                <h3>
+                    🤎 Tus pequeños gestos
+                </h3>
+
+                <p>
+                    Siempre que puedes me abrazas
+                    y me das besitos.
+                </p>
+
+                <p>
+                    Cuando algo no me gusta,
+                    buscas cómo arreglarlo y cambias
+                    aquello que puedes cambiar.
+                </p>
+
+                <p>
+                    Y, de alguna manera, siempre encuentras
+                    la forma de hacerme reír.
+                </p>
+
+            </article>
+
+
+
+            <article>
+
+                <h3>
+                    ✨ Lo que queda
+                </h3>
+
+                <p>
+                    Quizá algún día no recordemos todos
+                    los detalles de cada uno de estos días.
+                </p>
+
+                <p>
+                    Pero probablemente recordaremos
+                    cómo nos sentimos.
+                </p>
+
+                <p>
+                    Y eso también forma parte
+                    de nuestra historia.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARCHIVO 003 — GALERÍA
+===================================================== -->
+
+<section
+    id="galeria"
+    class="pantalla oculto"
+>
+
+
+    <button
+        class="volver"
+        onclick="volverArchivo()"
+    >
+        ← VOLVER AL ARCHIVO
+    </button>
+
+
+    <div class="contenido-interior">
+
+        <span>
+            ARCHIVO 003 · FOTOGRAMAS
+        </span>
+
+        <h2>
+            Nuestra galería
+        </h2>
+
+        <p class="frase">
+            Quince fotografías.
+            Quince pequeños pedazos de una historia.
+        </p>
+
+
+        <div class="galeria">
+
+
+            <figure>
+                <img src="img/foto1.jpg" alt="Recuerdo">
+                <figcaption>FLORES</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto2.jpg" alt="Recuerdo">
+                <figcaption>FLORES</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto3.jpg" alt="Recuerdo">
+                <figcaption>REINADO</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto4.jpg" alt="Recuerdo">
+                <figcaption>UN MOMENTO</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto5.jpg" alt="Recuerdo">
+                <figcaption>VIAJE DE LA ESCUELA</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto6.jpg" alt="Recuerdo">
+                <figcaption>REINADO</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto7.jpg" alt="Recuerdo">
+                <figcaption>UN MOMENTO</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto8.jpg" alt="Recuerdo">
+                <figcaption>REINADO</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto9.jpg" alt="Recuerdo">
+                <figcaption>UN MOMENTO</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto10.jpg" alt="Recuerdo">
+                <figcaption>PEÑA DE LA CRUZ</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto11.jpg" alt="Recuerdo">
+                <figcaption>PRIMERAS FOTOS</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto12.jpg" alt="Recuerdo">
+                <figcaption>PRIMERAS FOTOS</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto13.jpg" alt="Recuerdo">
+                <figcaption>FLORES</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto14.jpg" alt="Recuerdo">
+                <figcaption>PRIMERAS FOTOS</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/foto15.jpg" alt="Recuerdo">
+                <figcaption>PRIMERAS FOTOS</figcaption>
+            </figure>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARCHIVO 004 — NUESTRA CANCIÓN
+===================================================== -->
+
+<section
+    id="cancion"
+    class="pantalla oculto"
+>
+
+
+    <button
+        class="volver"
+        onclick="volverArchivo()"
+    >
+        ← VOLVER AL ARCHIVO
+    </button>
+
+
+    <div class="cancion-pantalla">
+
+
+        <div class="silueta-pareja">
+
+            <div class="silueta-hombre">
+
+                <div class="cabeza"></div>
+
+                <div class="cuerpo"></div>
+
+            </div>
+
+
+            <div class="silueta-mujer">
+
+                <div class="cabeza"></div>
+
+                <div class="cuerpo"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contenido-cancion">
+
+            <span>
+                ARCHIVO 004 · AUDIO
+            </span>
+
+            <h2>
+                Nuestra canción
+            </h2>
+
+            <p>
+                Hay canciones que simplemente suenan.
+                Y hay otras que terminan guardando
+                una parte de nosotros.
+            </p>
+
+
+            <div
+                class="vinilo-grande"
+                id="viniloMusica"
+            >
+
+                <div class="centro-vinilo-grande">
+                    ♪
+                </div>
+
+            </div>
+
+
+            <!-- LA CANCIÓN ESTÁ EN LA CARPETA AUDIO -->
+
+            <audio
+                id="nuestraCancion"
+                src="audio/nuestra-cancion.mp3"
+                preload="metadata"
+            >
+            </audio>
+
+
+            <button
+                id="botonMusica"
+                class="boton-dorado"
+                onclick="alternarMusica()"
+            >
+                ▶ REPRODUCIR
+            </button>
+
+
+            <h3>
+                Para ti.
+            </h3>
+
+            <p class="dedicatoria">
+                Quizá esta canción significa más para mí
+                que para ti. Quizá aquel día me enojé
+                porque no la escuchaste como yo quería.
+                Pero al final me gustó habértela dedicado,
+                porque para mí terminó significando
+                una forma de decirte cuánto te amo.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARCHIVO 005 — CARTA
+===================================================== -->
+
+<section
+    id="secreto"
+    class="pantalla-secreta oculto"
+>
+
+
+    <button
+        class="volver"
+        onclick="volverArchivo()"
+    >
+        ← VOLVER AL ARCHIVO
+    </button>
+
+
+    <div class="contenido-secreto">
+
+        <span>
+            ARCHIVO 005 · CLASIFICADO
+        </span>
+
+        <h2>
+            Para abrir este archivo
+        </h2>
+
+        <p>
+            Hay recuerdos que cualquiera puede mirar.
+            Este no.
+        </p>
+
+
+        <input
+            type="password"
+            id="clave"
+            placeholder="Introduce la contraseña..."
+        >
+
+
+        <button
+            class="boton-dorado"
+            onclick="abrirSecreto()"
+        >
+            DESBLOQUEAR
+        </button>
+
+
+        <p
+            id="mensajeSecreto"
+            class="mensaje-secreto"
+        ></p>
+
+
+
+        <div
+            id="cartaSecreta"
+            class="carta oculto"
+        >
+
+            <div class="carta-marco">
+
+                <span>
+                    ARCHIVO PERSONAL · PARA GABRIEL
+                </span>
+
+                <h2>
+                    Mi querido Gabriel
+                </h2>
+
+                <div class="carta-linea"></div>
+
+
+                <div class="carta-texto">
+
+                    <p>
+                        Si llegaste hasta aquí, significa que
+                        encontraste el último archivo.
+                    </p>
+
+                    <p>
+                        Y supongo que no podía terminar todo
+                        esto sin guardar también las palabras
+                        que muchas veces no sé cómo decirte
+                        cuando estamos frente a frente.
+                    </p>
+
+                    <p>
+                        Nuestra historia no comenzó de una
+                        manera perfecta. De hecho, si alguien
+                        hubiera intentado escribirla antes,
+                        probablemente habría parecido una
+                        historia bastante extraña.
+                    </p>
+
+                    <p>
+                        Empezó jugando basket, con un beso
+                        que ninguno de los dos planeó realmente.
+                        Después vinieron los mensajes, las
+                        conversaciones y aquella confesión
+                        que llegó una semana después.
+                    </p>
+
+                    <p>
+                        Al principio me parecías arrogante.
+                        Incluso hubo momentos en los que
+                        me caías mal.
+                    </p>
+
+                    <p>
+                        Pero terminé descubriendo cosas de ti
+                        que hicieron que aquella primera
+                        impresión dejara de importar.
+                    </p>
+
+                    <p>
+                        Tu inteligencia.
+                        Tu manera de hacerme reír.
+                        Lo intenso que puedes ser.
+                        La forma en que puedes ser cariñoso
+                        conmigo.
+                    </p>
+
+                    <p>
+                        También están tus pequeños gestos:
+                        los abrazos, los besitos, las veces
+                        que buscas arreglar las cosas cuando
+                        algo no está bien y esas ocasiones
+                        en las que intentas hacerme reír
+                        aunque probablemente yo esté decidida
+                        a seguir enojada.
+                    </p>
+
+                    <p>
+                        Hemos tenido peleas.
+                        Hemos tropezado.
+                        Hemos tenido días buenos y días
+                        que no fueron tan fáciles.
+                    </p>
+
+                    <p>
+                        Pero seguimos aquí.
+                    </p>
+
+                    <p>
+                        Y quizá eso sea una de las cosas que
+                        más quiero guardar de nosotros:
+                        que nuestra historia no depende de
+                        que todo haya sido perfecto.
+                    </p>
+
+                    <p>
+                        Me quedo con aquel día de lluvia,
+                        cuando corrimos después de comer
+                        tortitas de maíz y pozole.
+                    </p>
+
+                    <p>
+                        Me quedo con el día de mi reinado,
+                        cuando estaba nerviosa y tú me
+                        recordabas que podía hacerlo.
+                    </p>
+
+                    <p>
+                        Me quedo con el día que fuiste a mi casa
+                        mientras yo estaba enferma y me levanté
+                        solamente porque quería verte.
+                    </p>
+
+                    <p>
+                        Me quedo con aquel cumpleaños en el
+                        que decidimos no ir a clases, mi hermana
+                        nos dio dinero y terminamos comiendo
+                        arroz chino juntos.
+                    </p>
+
+                    <p>
+                        Me quedo con todos esos momentos que
+                        quizá parecían pequeños cuando estaban
+                        sucediendo, pero que ahora forman parte
+                        de todo esto.
+                    </p>
+
+                    <p>
+                        Y si algún día necesito recordar por
+                        qué sigo queriendo esta historia,
+                        probablemente no necesitaré buscar
+                        demasiado lejos.
+                    </p>
+
+                    <p>
+                        Porque tú eres el recuerdo que siempre
+                        usaré para poder invocar mi Patronus
+                        cuando tenga que protegerme de los
+                        Dementores.
+                    </p>
+
+                    <p>
+                        No sé qué páginas nos quedan por escribir.
+                        Tampoco sé cuántos capítulos tendrá
+                        nuestra historia.
+                    </p>
+
+                    <p>
+                        Pero sí sé que me alegra que exista.
+                    </p>
+
+                    <p>
+                        Y entre todas las cosas que podría
+                        guardar en un archivo, decidí guardar
+                        precisamente esto:
+                        nosotros.
+                    </p>
+
+                </div>
+
+
+                <div class="carta-final">
+
+                    <span>
+                        ARCHIVO SELLADO
+                    </span>
+
+                    <strong>
+                        Gaby
+                    </strong>
+
+                    <small>
+                        Para el recuerdo que siempre volvería a elegir.
+                    </small>
+
+                    <div class="beso-carta">
+                        💋
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

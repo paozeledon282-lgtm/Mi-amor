@@ -1,0 +1,1352 @@
+/* =====================================================
+   GABRIEL.EXE
+   ESTILO GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0908;
+    color: #eee4d0;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =====================================================
+   PORTADA
+===================================================== */
+
+#inicio {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 25%, rgba(126, 92, 48, .16), transparent 28%),
+        linear-gradient(to bottom, #090b12 0%, #11151b 52%, #17120f 100%);
+}
+
+.portada-fondo {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.estrellas,
+.estrellas::before,
+.estrellas::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+}
+
+.estrellas {
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.85) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,220,160,.55) 1px, transparent 1.5px);
+    background-size: 110px 110px, 170px 170px;
+    background-position: 10px 20px, 60px 80px;
+    opacity: .65;
+}
+
+.luna {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    top: 12%;
+    right: 13%;
+    background: #f3e6bf;
+    box-shadow:
+        0 0 35px rgba(244, 224, 166, .3),
+        0 0 100px rgba(244, 224, 166, .12);
+}
+
+.luna::after {
+    content: "";
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: #090b12;
+    left: 38px;
+    top: -12px;
+}
+
+.montana {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 380px solid transparent;
+    border-right: 380px solid transparent;
+    border-bottom: 370px solid #11100f;
+}
+
+.montana-1 {
+    left: -180px;
+}
+
+.montana-2 {
+    right: -190px;
+    transform: scaleX(1.2);
+    border-bottom-color: #0d0d0d;
+}
+
+.casa {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 270px;
+    height: 210px;
+    z-index: 3;
+}
+
+.techo {
+    position: absolute;
+    top: 0;
+    left: -35px;
+    width: 340px;
+    height: 100px;
+    background: #090909;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.pared {
+    position: absolute;
+    bottom: 0;
+    width: 270px;
+    height: 145px;
+    background: #090909;
+}
+
+.ventana {
+    position: absolute;
+    width: 45px;
+    height: 48px;
+    bottom: 55px;
+    border: 4px solid #151515;
+    background: rgba(222, 161, 63, .45);
+    box-shadow: 0 0 20px rgba(225, 166, 66, .15);
+}
+
+.ventana-1 {
+    left: 35px;
+}
+
+.ventana-2 {
+    right: 35px;
+}
+
+.puerta {
+    position: absolute;
+    width: 55px;
+    height: 100px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #080808;
+    border: 3px solid #171717;
+}
+
+
+/* =====================================================
+   PORTADA CONTENIDO
+===================================================== */
+
+.portada-contenido {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle, transparent 20%, rgba(0,0,0,.2) 100%);
+}
+
+.archivo-superior {
+    font-size: .72rem;
+    letter-spacing: 5px;
+    color: #c4a86c;
+    margin-bottom: 12px;
+}
+
+.linea-dorada {
+    width: 90px;
+    height: 1px;
+    background: #c4a86c;
+    margin-bottom: 25px;
+}
+
+.gabriel {
+    font-size: clamp(4rem, 11vw, 8rem);
+    letter-spacing: 12px;
+    font-weight: 700;
+    line-height: .85;
+    color: #f0dfba;
+    text-shadow: 0 4px 30px rgba(0,0,0,.7);
+}
+
+.exe {
+    font-size: 1.2rem;
+    letter-spacing: 12px;
+    color: #a58b59;
+    margin-top: 15px;
+}
+
+.identidad {
+    margin-top: 30px;
+    letter-spacing: 4px;
+    font-size: .75rem;
+    color: #bdb19b;
+}
+
+.fecha {
+    margin-top: 10px;
+    font-size: .65rem;
+    letter-spacing: 3px;
+    color: #8b806f;
+}
+
+.portada-texto {
+    max-width: 520px;
+    line-height: 1.8;
+    color: #c6bcab;
+    margin: 35px auto;
+    font-size: .95rem;
+}
+
+.boton-entrada,
+.boton-dorado {
+    border: 1px solid #b99a5a;
+    background: rgba(13, 11, 8, .75);
+    color: #e6d2a3;
+    padding: 15px 30px;
+    letter-spacing: 3px;
+    font-size: .7rem;
+    transition: .35s ease;
+}
+
+.boton-entrada:hover,
+.boton-dorado:hover {
+    background: #b99a5a;
+    color: #100d09;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(185,154,90,.2);
+}
+
+.codigo-inferior {
+    position: absolute;
+    bottom: 25px;
+    font-size: .58rem;
+    letter-spacing: 3px;
+    color: #675f52;
+}
+
+
+/* =====================================================
+   ARCHIVO PRINCIPAL
+===================================================== */
+
+#archivo {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(139,105,56,.12), transparent 35%),
+        #11100e;
+}
+
+.cabecera {
+    text-align: center;
+    padding: 65px 20px 20px;
+}
+
+.codigo {
+    font-size: .65rem;
+    color: #a88a55;
+    letter-spacing: 4px;
+}
+
+.cabecera h1 {
+    margin-top: 15px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #e9d7b1;
+}
+
+.cabecera p {
+    margin-top: 10px;
+    color: #8e8679;
+    font-size: .9rem;
+}
+
+.escritorio {
+    max-width: 1150px;
+    margin: auto;
+    padding: 35px 25px 50px;
+}
+
+.titulo-escritorio {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.titulo-escritorio span {
+    font-size: .6rem;
+    letter-spacing: 4px;
+    color: #9e8350;
+}
+
+.titulo-escritorio h2 {
+    margin: 12px 0;
+    color: #ddd0b9;
+}
+
+.titulo-escritorio p {
+    color: #777065;
+    font-size: .85rem;
+}
+
+
+/* =====================================================
+   OBJETOS DEL ESCRITORIO
+===================================================== */
+
+.objetos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    align-items: center;
+}
+
+.objeto {
+    position: relative;
+    min-height: 260px;
+    border: 0;
+    color: inherit;
+    transition: transform .45s cubic-bezier(.2,.8,.2,1);
+}
+
+.objeto:hover {
+    transform: translateY(-12px) rotate(-1deg);
+}
+
+.documento {
+    grid-column: span 2;
+    padding: 35px 28px;
+    text-align: left;
+    background:
+        linear-gradient(135deg, #e9dcc1, #c9b994);
+    color: #30281d;
+    clip-path: polygon(
+        0 0,
+        88% 0,
+        100% 12%,
+        100% 100%,
+        0 100%
+    );
+    box-shadow: 12px 18px 35px rgba(0,0,0,.35);
+}
+
+.documento::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    right: 0;
+    top: 0;
+    background: #a7926b;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    opacity: .6;
+}
+
+.documento small,
+.tarjeta-recuerdo small {
+    font-size: .55rem;
+    letter-spacing: 3px;
+    opacity: .65;
+}
+
+.documento h3,
+.tarjeta-recuerdo h3 {
+    font-size: 1.7rem;
+    margin: 18px 0;
+}
+
+.mini-linea {
+    width: 50px;
+    height: 2px;
+    background: currentColor;
+    opacity: .35;
+    margin-bottom: 20px;
+}
+
+.documento p,
+.tarjeta-recuerdo p {
+    line-height: 1.65;
+    font-size: .8rem;
+}
+
+.documento > span {
+    position: absolute;
+    bottom: 24px;
+    font-size: .6rem;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   RECUERDOS — NUBE
+===================================================== */
+
+.recuerdos-objeto {
+    grid-column: span 2;
+    background: transparent;
+    overflow: visible;
+}
+
+.tarjeta-recuerdo {
+    position: absolute;
+    inset: 25px 10px;
+    padding: 40px 32px;
+    background: #ddd3bd;
+    color: #322b22;
+    border-radius: 45% 55% 50% 45%;
+    box-shadow:
+        10px 15px 30px rgba(0,0,0,.35),
+        inset 0 0 30px rgba(255,255,255,.25);
+}
+
+.tarjeta-recuerdo::before,
+.tarjeta-recuerdo::after {
+    content: "";
+    position: absolute;
+    background: #ddd3bd;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.tarjeta-recuerdo::before {
+    width: 85px;
+    height: 85px;
+    left: 30px;
+    top: -30px;
+}
+
+.tarjeta-recuerdo::after {
+    width: 105px;
+    height: 105px;
+    right: 30px;
+    top: -45px;
+}
+
+
+/* =====================================================
+   GALERÍA — FOTO APILADA
+===================================================== */
+
+.galeria-objeto {
+    grid-column: span 2;
+    background: transparent;
+    overflow: visible;
+}
+
+.fotos-apiladas {
+    position: relative;
+    width: 180px;
+    height: 205px;
+    margin: 0 auto;
+}
+
+.foto-apilada {
+    position: absolute;
+    width: 155px;
+    height: 185px;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    background: #eee4d1;
+    padding: 8px;
+    box-shadow: 8px 12px 25px rgba(0,0,0,.4);
+}
+
+.foto-atras {
+    transform: translateX(-50%) rotate(-13deg);
+    background: #d1c5ae;
+}
+
+.foto-medio {
+    transform: translateX(-50%) rotate(8deg);
+    background: #ddd1ba;
+}
+
+.foto-frente {
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.foto-frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.etiqueta-objeto {
+    margin-top: 20px;
+    font-size: .55rem;
+    letter-spacing: 3px;
+    color: #b29b6d;
+}
+
+
+/* =====================================================
+   VINILO PEQUEÑO
+===================================================== */
+
+.cancion-objeto {
+    grid-column: span 3;
+    min-height: 280px;
+    background:
+        radial-gradient(circle, #302b26 0 10%, #111 11% 60%, #191919 61% 100%);
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    margin: auto;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.5),
+        inset 0 0 30px rgba(255,255,255,.04);
+}
+
+.vinilo-pequeno {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 0;
+    border-radius: 50%;
+    background:
+        repeating-radial-gradient(circle, #090909 0 3px, #222 4px 5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.centro-vinilo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #9e8350;
+    color: #1b160e;
+    display: grid;
+    place-items: center;
+}
+
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.secreto-objeto {
+    grid-column: span 3;
+    background: transparent;
+}
+
+.sobre-principal {
+    position: relative;
+    width: 260px;
+    height: 180px;
+    margin: 35px auto;
+    background: #d5c19d;
+    color: #342a1d;
+    box-shadow: 12px 18px 35px rgba(0,0,0,.4);
+    padding-top: 85px;
+}
+
+.solapa-sobre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-top: 90px solid #bba37b;
+}
+
+.sello {
+    position: absolute;
+    z-index: 3;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #641c1c;
+    color: #d9a7a0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,.3);
+}
+
+.sobre-principal strong {
+    display: block;
+    font-size: .85rem;
+    letter-spacing: 3px;
+}
+
+.sobre-principal small {
+    display: block;
+    margin-top: 8px;
+    font-size: .55rem;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   PIE
+===================================================== */
+
+.pie-escritorio {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(180,150,95,.15);
+    color: #5f594e;
+    font-size: .55rem;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   PANTALLAS
+===================================================== */
+
+.pantalla,
+.pantalla-secreta {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(130,95,50,.1), transparent 35%),
+        #0e0c0a;
+    position: relative;
+    padding: 80px 25px;
+}
+
+.volver {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 100;
+    border: 1px solid rgba(190,160,100,.35);
+    background: rgba(10,9,8,.85);
+    color: #bda574;
+    padding: 10px 16px;
+    font-size: .6rem;
+    letter-spacing: 2px;
+    backdrop-filter: blur(10px);
+}
+
+.volver:hover {
+    background: #bda574;
+    color: #16110c;
+}
+
+
+/* =====================================================
+   PELÍCULA — NUESTRA HISTORIA
+===================================================== */
+
+.pelicula {
+    background:
+        linear-gradient(
+            rgba(8,8,8,.85),
+            rgba(8,8,8,.85)
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 4px,
+            rgba(255,255,255,.015) 5px
+        ),
+        #111;
+}
+
+.rollo-lateral {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 55px;
+    z-index: 50;
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #17130f 0 25px,
+            #050505 25px 45px
+        );
+    opacity: .8;
+}
+
+.rollo-lateral::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle,
+            #050505 0 5px,
+            transparent 6px
+        );
+    background-size: 55px 70px;
+}
+
+.rollo-izquierdo {
+    left: 0;
+}
+
+.rollo-derecho {
+    right: 0;
+}
+
+.intro-pelicula {
+    min-height: 95vh;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-pelicula span,
+.texto-escena span,
+.final-pelicula span {
+    color: #b69a61;
+    letter-spacing: 4px;
+    font-size: .6rem;
+}
+
+.intro-pelicula h2 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin: 25px 0;
+    color: #eee1c7;
+}
+
+.intro-pelicula p {
+    color: #a39b8c;
+    line-height: 2;
+    max-width: 650px;
+    margin: auto;
+}
+
+.flecha-scroll {
+    margin-top: 80px;
+    font-size: 2rem;
+    color: #b69a61;
+    animation: bajar 1.7s infinite;
+}
+
+@keyframes bajar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+.escena {
+    min-height: 90vh;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 100px 40px;
+}
+
+.escena-centro {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.numero-escena {
+    font-size: 7rem;
+    color: rgba(180,150,95,.12);
+    font-weight: bold;
+}
+
+.texto-escena {
+    max-width: 600px;
+}
+
+.texto-escena h2 {
+    font-size: clamp(2rem, 5vw, 3.7rem);
+    margin: 18px 0 30px;
+    color: #e5d8c0;
+}
+
+.texto-escena p {
+    color: #9d9587;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.final-pelicula {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.final-pelicula h2 {
+    font-size: 4rem;
+    color: #e5d8c0;
+    margin: 20px;
+}
+
+.infinito {
+    font-size: 5rem;
+    color: #b69a61;
+}
+
+
+/* =====================================================
+   INTERIORES
+===================================================== */
+
+.contenido-interior {
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.contenido-interior > span,
+.contenido-cancion > span,
+.contenido-secreto > span {
+    color: #aa8c58;
+    letter-spacing: 4px;
+    font-size: .6rem;
+}
+
+.contenido-interior h2,
+.contenido-cancion h2,
+.contenido-secreto h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #e6d8bf;
+    margin: 20px 0;
+}
+
+.frase {
+    color: #8d867b;
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   RECUERDOS
+===================================================== */
+
+.tarjetas-recuerdos {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.tarjetas-recuerdos article {
+    padding: 38px;
+    min-height: 310px;
+    background:
+        linear-gradient(135deg, rgba(217,203,173,.97), rgba(177,156,116,.96));
+    color: #30281e;
+    border-radius: 18px 35px 20px 40px;
+    box-shadow: 10px 18px 35px rgba(0,0,0,.3);
+    transform: rotate(-.7deg);
+    transition: .4s ease;
+}
+
+.tarjetas-recuerdos article:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.tarjetas-recuerdos article:hover {
+    transform: translateY(-8px) rotate(0);
+}
+
+.tarjetas-recuerdos h3 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+}
+
+.tarjetas-recuerdos p {
+    line-height: 1.8;
+    margin-bottom: 14px;
+    font-size: .88rem;
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 35px;
+    position: relative;
+}
+
+.galeria::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #9b7e4c 0 12px,
+        transparent 12px 25px
+    );
+    opacity: .35;
+    z-index: 0;
+}
+
+.galeria figure {
+    position: relative;
+    z-index: 2;
+    background: #eee5d5;
+    padding: 10px 10px 35px;
+    box-shadow: 8px 15px 30px rgba(0,0,0,.4);
+    transition: .45s ease;
+}
+
+.galeria figure:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.galeria figure:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.galeria figure:hover {
+    transform: translateY(-12px) rotate(0);
+    z-index: 10;
+}
+
+.galeria img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    display: block;
+    object-fit: cover;
+}
+
+.galeria figcaption {
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #4b4235;
+    font-size: .55rem;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   CANCIÓN
+===================================================== */
+
+#cancion {
+    overflow: hidden;
+}
+
+.cancion-pantalla {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contenido-cancion {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    max-width: 650px;
+}
+
+.contenido-cancion > p {
+    color: #91897d;
+    line-height: 1.8;
+}
+
+.vinilo-grande {
+    width: 330px;
+    height: 330px;
+    margin: 45px auto 30px;
+    border-radius: 50%;
+    background:
+        repeating-radial-gradient(
+            circle,
+            #080808 0 4px,
+            #1b1b1b 5px 7px
+        );
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.6),
+        inset 0 0 40px rgba(255,255,255,.04);
+    display: grid;
+    place-items: center;
+}
+
+.centro-vinilo-grande {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #9b7540;
+    color: #1a1209;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    border: 5px solid #15100b;
+}
+
+.vinilo-girando {
+    animation: girarVinilo 4s linear infinite;
+}
+
+@keyframes girarVinilo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.silueta-pareja {
+    position: absolute;
+    inset: auto 0 0;
+    height: 55%;
+    opacity: .12;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    pointer-events: none;
+}
+
+.silueta-hombre,
+.silueta-mujer {
+    position: relative;
+    width: 150px;
+    height: 430px;
+}
+
+.cabeza {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #c8b895;
+}
+
+.cuerpo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 135px;
+    height: 350px;
+    background: #c8b895;
+    border-radius: 65px 65px 0 0;
+}
+
+.silueta-mujer .cuerpo {
+    width: 120px;
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+}
+
+
+/* =====================================================
+   CARTA / ARCHIVO 005
+===================================================== */
+
+#secreto {
+    background:
+        radial-gradient(circle at center, rgba(130,90,45,.15), transparent 50%),
+        #17110c;
+}
+
+.contenido-secreto {
+    max-width: 700px;
+    margin: auto;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.contenido-secreto > p {
+    color: #94897a;
+    line-height: 1.8;
+    margin: 15px 0 25px;
+}
+
+#clave {
+    width: min(400px, 90%);
+    padding: 15px 18px;
+    background: #0c0a08;
+    border: 1px solid #6e5938;
+    color: #e6d6b8;
+    outline: none;
+    margin: 10px;
+}
+
+.mensaje-secreto {
+    min-height: 25px;
+    color: #c88e79;
+}
+
+
+/* =====================================================
+   CARTA ANTIGUA
+===================================================== */
+
+.carta {
+    margin-top: 60px;
+    text-align: left;
+}
+
+.carta-marco {
+    position: relative;
+    padding: 70px 65px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(88,54,23,.18), transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(88,54,23,.15), transparent 25%),
+        #d6bd91;
+    color: #38291b;
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.55),
+        inset 0 0 60px rgba(83,49,20,.2);
+    border: 1px solid #8b6a42;
+    overflow: hidden;
+}
+
+.carta-marco::before,
+.carta-marco::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(68,40,17,.12);
+    filter: blur(18px);
+    border-radius: 50%;
+}
+
+.carta-marco::before {
+    left: -35px;
+    top: -35px;
+}
+
+.carta-marco::after {
+    right: -35px;
+    bottom: -35px;
+}
+
+.carta-marco > span {
+    font-size: .6rem;
+    letter-spacing: 3px;
+    opacity: .65;
+}
+
+.carta-marco h2 {
+    color: #392719;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin: 25px 0;
+}
+
+.carta-linea {
+    width: 100%;
+    height: 1px;
+    background: rgba(67,45,26,.35);
+    margin-bottom: 35px;
+}
+
+.carta-texto {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.carta-texto p {
+    margin-bottom: 22px;
+}
+
+.carta-final {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid rgba(67,45,26,.3);
+    padding-top: 30px;
+}
+
+.carta-final span {
+    display: block;
+    font-size: .55rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.carta-final strong {
+    display: block;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.carta-final small {
+    display: block;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.beso-carta {
+    margin-top: 30px;
+    font-size: 5rem;
+    filter: drop-shadow(0 4px 5px rgba(70,0,0,.3));
+    transform: rotate(-8deg);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .objetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .documento,
+    .recuerdos-objeto,
+    .galeria-objeto,
+    .cancion-objeto,
+    .secreto-objeto {
+        grid-column: span 1;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .escena {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .gabriel {
+        font-size: 3.7rem;
+        letter-spacing: 6px;
+    }
+
+    .luna {
+        width: 95px;
+        height: 95px;
+        right: 8%;
+    }
+
+    .luna::after {
+        width: 95px;
+        height: 95px;
+    }
+
+    .objetos {
+        grid-template-columns: 1fr;
+    }
+
+    .documento,
+    .recuerdos-objeto,
+    .galeria-objeto,
+    .cancion-objeto,
+    .secreto-objeto {
+        grid-column: span 1;
+    }
+
+    .pie-escritorio {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .rollo-lateral {
+        width: 25px;
+    }
+
+    .escena {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 35px;
+        gap: 10px;
+    }
+
+    .escena-centro {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .numero-escena {
+        font-size: 4rem;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria::before {
+        display: none;
+    }
+
+    .vinilo-grande {
+        width: 260px;
+        height: 260px;
+    }
+
+    .carta-marco {
+        padding: 45px 28px;
+    }
+
+}
